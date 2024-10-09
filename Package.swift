@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "search-bar-swiftui",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "SearchBarSwiftUI",
