@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 @MainActor
-@Observable final class SearchBarViewModel {
+final class SearchBarViewModel {
     // MARK: - PROPERTIES
     let colors: ColorContext
     
@@ -19,7 +19,6 @@ import Combine
     var cancelButtonOpacity: CGFloat = 0
     
     var searchBarAnimation: (text: String, state: Bool)? { didSet { searchBarAnimation$ = searchBarAnimation } }
-    @ObservationIgnored
     @Published private(set) var searchBarAnimation$: (text: String, state: Bool)?
     
     private var cancelable: Set<AnyCancellable> = []
